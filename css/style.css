@@ -1,4 +1,4 @@
-		body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
 	margin: 0;
 	padding: 0;
 }
@@ -20,6 +20,14 @@ img {
 body {
 	line-height: 1;
 	font-family: "Roboto", "noto Sans kr", sans-serif;
+}
+
+.utils ul li::after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 14px;
+	background-color: #aaa;
 }
 
 .skip_nav a {
