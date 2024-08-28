@@ -1,4 +1,3 @@
-<style>
 		body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
 	margin: 0;
 	padding: 0;
@@ -22,7 +21,24 @@ body {
 	line-height: 1;
 	font-family: "Roboto", "noto Sans kr", sans-serif;
 }
-	
+
+.skip_nav a {
+	position: fixed;
+	left: 0;
+	top: -9999px;
+	z-index: 9999;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	font-size: 0.875em;
+	background-color: #385170;
+	color: #fff;	
+}
+
+.skip_nav a:focus {
+	top: 0;
+	text-decoration: underline;
+}
 
 header {
 	display: flex;
@@ -41,6 +57,11 @@ header .sns ul {
 	display: flex;
 	gap: 6px;
 }
+header .sns .button {
+	display: flex;
+	align-items: center;
+}
+
 header .utils ul {
 	display: flex;
 	justify-content: space-between;
@@ -60,7 +81,7 @@ nav > ul {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	height: 185px;
+	height: 55px;
 	overflow: hidden;
 	text-align: center;
 	background-color: #fff;
@@ -78,7 +99,7 @@ nav > ul::after {
 nav:hover > ul {
 	height: 185px
 }
-nav > ul > li { /*2depth*/
+nav > ul > li {
 	position: relative;
 }
 nav > ul > li > a {
@@ -107,24 +128,25 @@ nav .sub a {
 	font-size: 0.75em;
 	color: #a0a0a0;
 }
-nav .sub a:hover {
+nav .sub a:hover,
+nav .sub a:focus {
 	text-decoration: underline;
 	color: #000;
 }
 
 .slider {
 	height: 420px;
+	overflow: hidden;
+	margin: 0 auto;
 }
+
 .slider a img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover; 
+}
 
-}
-.slider img {
-	display: block;
-}
-.section {
+#section {
 	margin: 0 auto;
 	padding: 60px 0 70px; 
 	width: 1020px;
@@ -132,16 +154,24 @@ nav .sub a:hover {
 .banner1 {
 	display: flex;
 	gap: 30px;
+}	
+.banner1:focus {
+	top: 0;
 }
 .banner1_1 {
-	position: relative;
 	width: 690px;
 	height: 388px;
-	overflow: hidden;
 } 
+.banner1_1 a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 .banner1_1 a img {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 	transform: scale(1);
 	transition: transform 0.3s;
 }
@@ -174,7 +204,9 @@ nav .sub a:hover {
 	padding: 0 50px;
 	color: #999999;
 }
-.banner1 .banner1_2 a:hover .desc {
+
+.banner1 .banner1_2 a:hover .desc,
+.banner1 .banner1_2 a:focus .desc {
 	text-decoration: underline;
 }
 .banner1 .banner1_2 a .view_more {
@@ -183,8 +215,15 @@ nav .sub a:hover {
 	padding: 10px 20px;
 	text-decoration: underline;
 }
-.banner1 .banner1_2 a:hover .view_more {
+.banner1 .banner1_2 a:hover .view_more,
+.banner1 .banner1_2 a:focus .view_more {
 	text-decoration: none;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #B5252E;
+	
 }
 
 .banner2 {
@@ -192,6 +231,7 @@ nav .sub a:hover {
 	gap: 30px;
 	margin-top: 30px;
 }
+
 .banner2 .banner2_1 a {
 	display: flex;
 	justify-content: center;
@@ -216,7 +256,8 @@ nav .sub a:hover {
 	margin: 0 70px;
 	color: #999999;
 }
-.banner2 .banner2_1 a:hover .desc {
+.banner2 .banner2_1 a:hover .desc,
+.banner2 .banner2_1 a:focus .desc {
 	text-decoration: underline;
 }
 .banner2 .banner2_1 a .view_more {
@@ -225,21 +266,32 @@ nav .sub a:hover {
 	padding: 10px 20px;;
 	text-decoration: underline;
 }
-.banner2 .banner2_1 a:hover .view_more {
+.banner2 .banner2_1 a:hover .view_more,
+.banner2 .banner2_1 a:focus .view_more {
 	text-decoration: none;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #B5252E;
 }
 
 .banner2_2 {
 	width: 690px;
 	height: 388px;
+}
+.banner2_2 a {
+	display: block;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 }
 .banner2_2 a img {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 	transform: scale(1);
 	transition: transform 0.3s;
-	
 }
 .banner2_2 a:hover img,
 .banner2_2 a:focus img {
@@ -303,7 +355,9 @@ nav .sub a:hover {
 	height: 300px;
 	background-image: url(../images/new.png);
 }
-.banner_cont .banner3 .banner3_2 a:hover .inner {
+
+.banner_cont .banner3 .banner3_2 a:hover .inner,
+.banner_cont .banner3 .banner3_2 a:focus .inner {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -351,7 +405,8 @@ nav .sub a:hover {
 	height: 300px;
 	border: 1px solid #333;
 }
-.banner_cont .banner4 .banner4_1 a:hover .inner {
+.banner_cont .banner4 .banner4_1 a:hover .inner,
+.banner_cont .banner4 .banner4_1 a:focus .inner {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -359,7 +414,7 @@ nav .sub a:hover {
 	flex-direction: column;
 	width:490px ;
 	height: 300px;
-	background-image: url(images/sale.jpg);
+	background-image: url(../images/sale.jpg);
 	color: #fff;
 }
 .banner_cont .banner4 .banner4_1 a .inner strong {
@@ -440,5 +495,3 @@ footer .copy {
 	margin-top: 25px;
 	font-size: 12px;
 }
-
-</style>
