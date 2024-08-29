@@ -27,6 +27,8 @@ body {
 	position: absolute;
 	width: 1px;
 	height: 14px;
+	/* top: 60px;
+	transform: translateY(-50%); */
 	background-color: #aaa;
 }
 
@@ -48,7 +50,7 @@ body {
 	text-decoration: underline;
 }
 
-header {
+#header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -56,38 +58,39 @@ header {
 	width: 1020px;
 	height: 120px;
 }
-header .sns {
+#header .sns {
 	display: flex;
 	justify-content: space-between;
 	gap: 20px;
 }
-header .sns ul {
+#header .sns ul {
 	display: flex;
 	gap: 6px;
 }
-header .sns .button {
+#header .sns .button {
 	display: flex;
 	align-items: center;
 }
 
-header .utils ul {
+#header .utils ul {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	font-size: 12px;
 }
-header .utils ul li a {
+#header .utils ul li a {
 	padding: 0 12px;
 	color: #999999;
 }
-nav {
+#nav {
 	position: relative;
 	height: 55px;
 }
-nav > ul {
+#nav > ul {
 	position: absolute;
 	display: flex;
 	justify-content: center;
+	min-width: 1020px;
 	width: 100%;
 	height: 55px;
 	overflow: hidden;
@@ -95,7 +98,7 @@ nav > ul {
 	background-color: #fff;
 	transition: height 0.3s;
 }
-nav > ul::after {
+#nav > ul::after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -104,24 +107,24 @@ nav > ul::after {
 	top: 56px;
 	background-color: #aaa;
 }
-nav:hover > ul {
+#nav:hover > ul {
 	height: 185px
 }
-nav > ul > li {
+#nav > ul > li {
 	position: relative;
 }
-nav > ul > li > a {
+#nav > ul > li > a {
 	display: block;
 	padding: 0 60px;
 	line-height: 55px;
 	font-size: 0.875em;
 	color: #2f2f2f;
 }
-nav > ul > li:hover > a {
+#nav > ul > li:hover > a {
 	color: #b4252d;
 	text-decoration: double;
 }
-nav .sub {
+#nav .sub {
 	position: absolute;
 	left: 0;
 	top: 55px;
@@ -129,15 +132,15 @@ nav .sub {
 	padding-left: 60px;
 	padding-top: 14px;
 }
-nav .sub a {
+#nav .sub a {
 	display: block;
 	padding: 6px 0 7px;
 	line-height: 1;
 	font-size: 0.75em;
 	color: #a0a0a0;
 }
-nav .sub a:hover,
-nav .sub a:focus {
+#nav .sub a:hover,
+#nav .sub a:focus {
 	text-decoration: underline;
 	color: #000;
 }
@@ -145,7 +148,8 @@ nav .sub a:focus {
 .slider {
 	height: 420px;
 	overflow: hidden;
-	margin: 0 auto;
+	/* margin: 0 auto; */
+	min-width: 1020px;
 }
 
 .slider a img {
@@ -463,7 +467,7 @@ nav .sub a:focus {
 }
 .banner_cont .banner4 .banner4_2 a .inner span {
 	display: block;
-	margin-bottom: 8px;
+	padding-bottom: 8px;
 }
 .banner_cont .banner4 .banner4_2 a .inner strong {
 	display: block;
@@ -483,10 +487,12 @@ nav .sub a:focus {
 }
 
 footer { 
+	min-width: 1020px;
 	text-align: center;
 	padding: 50px 0;
 	background-color: #333;
 	color: #999999;
+
 }
 
 footer .address a {
